@@ -66,7 +66,7 @@ jobs:
         run: echo 'modules[]=@nuxthq/studio' > .nuxtrc
 
       - name: Generate
-        run: ${{ steps.pkgman.outputs.package_manager }} nuxi break
+        run: ${{ steps.pkgman.outputs.package_manager }} nuxi generate
         env:
           NUXT_PUBLIC_STUDIO_API_URL: http://localhost:1337
           NUXT_APP_BASE_URL: /${{ github.event.repository.name }}
